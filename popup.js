@@ -47,6 +47,13 @@ function send(){
     
 }
 
+$(document).keypress(function(e) {
+    var keycode = (e.keyCode ? e.keyCode : e.which);
+    if (keycode == '13') {
+      send()
+    }
+});
+
 joinButton.addEventListener('click',joined);
 SendButton.addEventListener('click',send);
 
@@ -61,7 +68,3 @@ chrome.storage.sync.get("resentServerIP",function (data) {
     input.value =  prevData
     
 })
-
-
-
-
