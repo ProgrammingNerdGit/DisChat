@@ -29,13 +29,13 @@ once you open Server.py in a text editor scroll all the way down to the lane tha
 to the left of that, there is a number and text that says 'localhost' change 'localhost' to a LAN IP (if don't know how to get an address go to [short tutorial](https://networking.grok.lsu.edu/article.aspx?articleid=14842&printable=y) or just use 0.0.0.0 as the ip) remember to keep the (') its very important
 and for the number it doesn't matter just make sure it's above like 4000 and bellow 9999 then your all good
 
-oh, and keep the IP address and the pos num you will need it to join the server
+oh, and keep the IP address and the port number you will need it to join the server
 
 after all that run the Server.py file, a window will popup that is just a console log for the server (if icon not there clikc the puzzle piece and click the pin icon left of the extention)
 
 ## Joining Custom Server
 
-easy just get the ip address and port from when you/your friend hosted a server put it in the ip address bar as "[ip]:[port]" so ex. "127.0.0.1:8080"
+easy just get the ip address and port from when you or your friend hosted a server put it in the ip address bar as "[ip]:[port]" so ex. "127.0.0.1:8080"
 and for the chatroom num put that as any single digit num and make sure your friend puts the same one in
 
 # Finished ->
