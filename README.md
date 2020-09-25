@@ -26,7 +26,7 @@ To host a server you need python (for now) to install go to www.python.org/downl
 download the Server.py and open it in a text editor (if you double click on it it will run the program so right-click -> open with -> notepad [if you're on windows])
 
 once you open Server.py in a text editor scroll all the way down to the lane that has "------change port and IP to preferred settings-------" 
-to the left of that, there is a number and text that says 'localhost' change 'localhost' to a LAN IP (if don't know how to get an address go to [short tutorial](https://www.youtube.com/watch?v=XtoBBrHruQU)) remember to keep the (') its very important
+to the left of that, there is a number and text that says 'localhost' change 'localhost' to a LAN IP (if don't know how to get an address go to [short tutorial](https://networking.grok.lsu.edu/article.aspx?articleid=14842&printable=y)) remember to keep the (') its very important
 and for the number it doesn't matter just make sure it's above like 4000 and bellow 9999 then your all good
 
 oh, and keep the IP address and the pos num you will need it to join the server
