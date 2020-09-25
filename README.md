@@ -40,5 +40,5 @@ and for the chatroom num put that as any single digit num and make sure your fri
 
 # Finished ->
 
-thats it if any problems or suggestions go to the ishues tab and that is have fun!
+thats it if any problems or suggestions go to the ishues tab, and thats about it have fun!
 
