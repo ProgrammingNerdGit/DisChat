@@ -4,19 +4,18 @@ const SendButton = document.getElementById("send");
 const chatInput = document.getElementById("chatbox");
 const chatNum = document.getElementById("chatNum");
 
-chatBox.innerHTML = "<h1><b>NOT CONNECTED</b></h1>";
-
-
-function stripHtml(html)
-{
-   var tmp = document.createElement("DIV");
-   tmp.innerHTML = html;
-   return tmp.innerText;
-}
+chatBox.innerHTML = "NOT CONNECTED";
 
 var IP = ""
 var input = document.getElementById("IP");
+
+var allowSend = true;
 function joined(){
+
+    if(input.value == "public"){
+        input.value = "35.227.64.163:8000"
+    }
+
     document.getElementById("Join").style.display = "none";
     if(chatNum.value > 9){
         chatNum.value = 9;
@@ -29,7 +28,7 @@ function joined(){
 
     var worker = new Worker('clientGet.js');
     worker.addEventListener('message', function(e) {
-        if(chatBox.innerHTML != e.data){chatBox.innerHTML= "<h2>"+decodeURI(e.data)+"</h2>";}
+        if(chatBox.innerHTML != e.data){chatBox.innerHTML= decodeURI(e.data);chatBox.scrollTop = chatBox.scrollHeight;}
         
         console.log(e.data);
     })
@@ -41,9 +40,16 @@ function joined(){
 
 
 function send(){
-    console.log(ip);
-    var worker2 = new Worker('clientSend.js');
-    worker2.postMessage([$("<p>"+chatInput.value+"</p>").text(),ip,chatNum.value]);
+    if(allowSend){
+        console.log(ip);
+        var worker2 = new Worker('clientSend.js');
+        worker2.postMessage([(chatInput.value).replace('%',''),ip,chatNum.value]);
+        allowSend = false
+        setTimeout(function() {
+            allowSend = true;
+          }, 750)
+    }
+    
     
 }
 
@@ -65,6 +71,12 @@ chrome.storage.sync.get("resentServerIP",function (data) {
 
     console.log(prevData)
 
-    input.value =  prevData
+    if(prevData != undefined){
+        input.value =  prevData
+    }
+    else{
+        input.value = "Input IP"
+    }
+    
     
 })
