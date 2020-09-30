@@ -1,7 +1,7 @@
 {
     "name": "DisChat",
-    "version": "1.0",
-    "description": "A chrome extention that uses sockets to chat with your friends",
+    "version": "1.1",
+    "description": "A chrome extention that uses webservers to chat with your friends",
     "browser_action":{
         "default_popup" : "popup.html"
     },
